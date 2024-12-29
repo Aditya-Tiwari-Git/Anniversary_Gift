@@ -1,1 +1,694 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Anniversary Website
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50">
+  <section class="py-16 min-h-screen flex items-center justify-center">
+   <div class="text-center space-y-8">
+    <h1 class="text-6xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent animate-fade-in">
+     Happy Anniversary, Laadoo
+    </h1>
+    <p class="text-xl text-gray-600 animate-fade-in-delayed">
+     One year of making memories together ❤️
+    </p>
+    <div class="animate-bounce mt-12">
+     <i class="fas fa-comment-dots mx-auto text-pink-500" style="font-size: 32px;">
+     </i>
+    </div>
+   </div>
+  </section>
+  <section class="py-16 bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 text-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-4">The Melody of Our Love</h2>
+      <p class="text-lg mb-6">
+        Let the music play and take you through the journey of our cherished moments. Control it as your heart desires. 🎶💖
+      </p>
+      <div class="flex justify-center space-x-4">
+        <!-- Play Button -->
+        <button id="play-music" class="px-6 py-3 bg-pink-600 hover:bg-pink-700 rounded-full text-lg font-medium transition-transform transform hover:scale-105">
+          Play Our Love Song ❤️
+        </button>
+        <!-- Stop Button -->
+        <button id="stop-music" class="px-6 py-3 bg-gray-600 hover:bg-gray-700 rounded-full text-lg font-medium transition-transform transform hover:scale-105 hidden">
+          Stop Music ✋
+        </button>
+      </div>
+      <!-- Hidden Audio Element -->
+      <audio id="background-music" loop>
+        <source src="assets/CHRISTINA PERRI - A THOUSAND YEARS (INSTRUMENTAL).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <script>
+      // Reference to the audio element and buttons
+      const music = document.getElementById('background-music');
+      const playButton = document.getElementById('play-music');
+      const stopButton = document.getElementById('stop-music');
+  
+      // Play music
+      playButton.addEventListener('click', () => {
+        music.play();
+        playButton.classList.add('hidden'); // Hide the play button
+        stopButton.classList.remove('hidden'); // Show the stop button
+      });
+  
+      // Stop music
+      stopButton.addEventListener('click', () => {
+        music.pause();
+        music.currentTime = 0; // Reset the music to the beginning
+        stopButton.classList.add('hidden'); // Hide the stop button
+        playButton.classList.remove('hidden'); // Show the play button
+      });
+    </script>
+  </section>
+  
+  
+  
+  <section class="py-20 bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400 text-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-5xl font-bold mb-4">One Year of Love and Laughter</h1>
+      <p class="text-xl mb-8">
+        A journey of a thousand smiles, countless memories, and endless love. Here's to the magic we've created together. ❤️
+      </p>
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/xdHx1YEsWwk?autoplay=1&loop=1&playlist=xdHx1YEsWwk&mute=1" 
+        title="Love in Small Things" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        class="rounded-lg shadow-lg">
+      </iframe>
+
+      <div class="mt-8">
+        <a href="#roadmap" class="px-8 py-3 bg-pink-600 hover:bg-pink-700 rounded-full text-lg font-medium scroll-smooth">
+          Explore Our Journey
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="roadmap" class="py-20 bg-gradient-to-br from-blue-100 to-indigo-200">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold text-gray-800 mb-12">Our Journey Together</h2>
+      <div id="timeline" class="flex flex-col items-center relative">
+        <!-- Roadmap Steps -->
+        <div id="step-1" class="roadmap-step relative p-6 bg-white rounded-lg shadow-lg w-full max-w-xl mb-12 hidden animate-fade-in">
+          <div class="flex items-center">
+            <div class="h-10 w-10 bg-indigo-500 text-white flex items-center justify-center rounded-full font-bold mr-4">
+              1
+            </div>
+            <h3 class="text-2xl font-bold text-indigo-600 mb-4">Our First Date - 31st December 2023</h3>
+          </div>
+          <p class="text-lg text-gray-600 mt-4">
+            At the serene Yamuna Bank in Okhla Bird Sanctuary, I held your hands for the first time and nervously confessed my love. 
+            The magical moment when you said yes and we shared our first kiss under the open sky.
+          </p>
+          <button class="mt-6 px-6 py-3 bg-indigo-500 text-white rounded-full hover:bg-indigo-600 transition next-step">
+            Next Step
+          </button>
+        </div>
+        <div id="step-2" class="roadmap-step relative p-6 bg-white rounded-lg shadow-lg w-full max-w-xl mb-12 hidden animate-fade-in">
+          <div class="flex items-center">
+            <div class="h-10 w-10 bg-purple-500 text-white flex items-center justify-center rounded-full font-bold mr-4">
+              2
+            </div>
+            <h3 class="text-2xl font-bold text-purple-600 mb-4">February - Our First Physical Interaction</h3>
+          </div>
+          <p class="text-lg text-gray-600 mt-4">
+            That rainy evening when we kissed, every drop seemed to sing our love story. I still remember how your arms wrapped around me, 
+            making the world outside disappear, and how your warmth melted every hesitation I had.
+          </p>
+          <button class="mt-6 px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-600 transition next-step">
+            Next Step
+          </button>
+        </div>
+        <div id="step-3" class="roadmap-step relative p-6 bg-white rounded-lg shadow-lg w-full max-w-xl mb-12 hidden animate-fade-in">
+          <div class="flex items-center">
+            <div class="h-10 w-10 bg-pink-500 text-white flex items-center justify-center rounded-full font-bold mr-4">
+              3
+            </div>
+            <h3 class="text-2xl font-bold text-pink-600 mb-4">April 25th - Our Deepest Connection</h3>
+          </div>
+          <p class="text-lg text-gray-600 mt-4">
+            On that special day, our souls and bodies intertwined for the first time. It wasn’t just about love; it was about trust, connection, 
+            and feeling like I belonged with you in every possible way. You became my forever.
+          </p>
+          <button class="mt-6 px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition next-step">
+            Next Step
+          </button>
+        </div>
+        <div id="step-4" class="roadmap-step relative p-6 bg-white rounded-lg shadow-lg w-full max-w-xl mb-12 hidden animate-fade-in">
+          <div class="flex items-center">
+            <div class="h-10 w-10 bg-yellow-500 text-white flex items-center justify-center rounded-full font-bold mr-4">
+              4
+            </div>
+            <h3 class="text-2xl font-bold text-yellow-600 mb-4">Monthly Ritual - Sharing Pastry</h3>
+          </div>
+          <p class="text-lg text-gray-600 mt-4">
+            At the end of every month, sharing a pastry together became our little ritual. The sweetness of each bite was nothing compared to 
+            the joy of seeing your smile light up, knowing these small traditions brought us closer.
+          </p>
+          <button class="mt-6 px-6 py-3 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition next-step">
+            Next Step
+          </button>
+        </div>
+        <div id="step-5" class="roadmap-step relative p-6 bg-white rounded-lg shadow-lg w-full max-w-xl mb-12 hidden animate-fade-in">
+          <div class="flex items-center">
+            <div class="h-10 w-10 bg-red-500 text-white flex items-center justify-center rounded-full font-bold mr-4">
+              5
+            </div>
+            <h3 class="text-2xl font-bold text-red-600 mb-4">11th November - Midnight Birthday Celebration</h3>
+          </div>
+          <p class="text-lg text-gray-600 mt-4">
+            Celebrating your birthday at midnight was unforgettable. The candles lit your face beautifully, but it was your laughter that 
+            made the night magical. Spending those precious hours with you will forever be etched in my heart.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const steps = document.querySelectorAll(".roadmap-step");
+        let currentStep = 0;
+  
+        function showStep(index) {
+          steps.forEach((step, i) => {
+            step.classList.toggle("hidden", i !== index);
+          });
+        }
+  
+        showStep(currentStep);
+  
+        document.querySelectorAll(".next-step").forEach((button) => {
+          button.addEventListener("click", () => {
+            if (currentStep < steps.length - 1) {
+              currentStep++;
+              showStep(currentStep);
+            }
+          });
+        });
+      });
+    </script>
+  </section>
+  
+  
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+        Our Story
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="group relative overflow-hidden rounded-xl p-6 cursor-pointer transition-all duration-500 bg-white hover:shadow-xl" onclick="revealContent(this)">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:opacity-20">
+            <i class="fas fa-heart" style="font-size: 100px;"></i>
+          </div>
+          <i class="fas fa-heart mb-4 text-pink-500" style="font-size: 32px;"></i>
+          <h3 class="text-xl font-bold mb-3">Why I Love You</h3>
+          <div class="hidden-content transform transition-all duration-500 translate-y-4 opacity-0">
+            <p class="text-gray-600">
+              Your smile lights up my world. Your kindness inspires me. Every moment with you feels magical. ❤️<br>
+              <span class="text-pink-500">"मोहब्बत के हर लफ्ज़ में तेरा नाम लिखूं,  
+              तेरी बाहों में आऊं और खुदा का शुक्र करूं।"</span>
+            </p>
+          </div>
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-sm transition-opacity group-hover:opacity-0">
+            <p class="text-sm font-medium">Click to reveal ✨</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl p-6 cursor-pointer transition-all duration-500 bg-white hover:shadow-xl" onclick="revealContent(this)">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:opacity-20">
+            <i class="fas fa-star" style="font-size: 100px;"></i>
+          </div>
+          <i class="fas fa-star mb-4 text-pink-500" style="font-size: 32px;"></i>
+          <h3 class="text-xl font-bold mb-3">Our First Date</h3>
+          <div class="hidden-content transform transition-all duration-500 translate-y-4 opacity-0">
+            <p class="text-gray-600">
+              I still remember how time flew by as we talked on our first date. The connection felt timeless. 🌟<br>
+              <span class="text-pink-500">"तुमसे मिलकर लगा, खुदा ने करम कर दिया,  
+              वो पल जैसे, जन्नत का एहसास बन गया।"</span>
+            </p>
+          </div>
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-sm transition-opacity group-hover:opacity-0">
+            <p class="text-sm font-medium">Click to reveal ✨</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl p-6 cursor-pointer transition-all duration-500 bg-white hover:shadow-xl" onclick="revealContent(this)">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:opacity-20">
+            <i class="fas fa-gift" style="font-size: 100px;"></i>
+          </div>
+          <i class="fas fa-gift mb-4 text-pink-500" style="font-size: 32px;"></i>
+          <h3 class="text-xl font-bold mb-3">Special Moments</h3>
+          <div class="hidden-content transform transition-all duration-500 translate-y-4 opacity-0">
+            <p class="text-gray-600">
+              All our little adventures and shared laughter are the treasures of my life. 🎁<br>
+              <span class="text-pink-500">"तेरे संग हर लम्हा खास लगता है,  
+              तू जो साथ हो तो हर रास्ता आसान लगता है।"</span>
+            </p>
+          </div>
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-sm transition-opacity group-hover:opacity-0">
+            <p class="text-sm font-medium">Click to reveal ✨</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl p-6 cursor-pointer transition-all duration-500 bg-white hover:shadow-xl" onclick="revealContent(this)">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:opacity-20">
+            <i class="fas fa-crown" style="font-size: 100px;"></i>
+          </div>
+          <i class="fas fa-crown mb-4 text-pink-500" style="font-size: 32px;"></i>
+          <h3 class="text-xl font-bold mb-3">You're My Queen</h3>
+          <div class="hidden-content transform transition-all duration-500 translate-y-4 opacity-0">
+            <p class="text-gray-600">
+              You are my strength, my guide, and my happiness. Thank you for being you. 👑<br>
+              <span class="text-pink-500">"तेरे बिना मेरी जिंदगी अधूरी है,  
+              तू ही मेरी हर दुआ की मंजूरी है।"</span>
+            </p>
+          </div>
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-sm transition-opacity group-hover:opacity-0">
+            <p class="text-sm font-medium">Click to reveal ✨</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl p-6 cursor-pointer transition-all duration-500 bg-white hover:shadow-xl" onclick="revealContent(this)">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:opacity-20">
+            <i class="fas fa-moon" style="font-size: 100px;"></i>
+          </div>
+          <i class="fas fa-moon mb-4 text-pink-500" style="font-size: 32px;"></i>
+          <h3 class="text-xl font-bold mb-3">Under the Stars</h3>
+          <div class="hidden-content transform transition-all duration-500 translate-y-4 opacity-0">
+            <p class="text-gray-600">
+              Those nights under the stars, dreaming of our future, are unforgettable. 🌙<br>
+              <span class="text-pink-500">"चांदनी रातों में जब तेरा साथ होता है,  
+              हर अंधेरा भी रोशन सा लगता है।"</span>
+            </p>
+          </div>
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-sm transition-opacity group-hover:opacity-0">
+            <p class="text-sm font-medium">Click to reveal ✨</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-xl p-6 cursor-pointer transition-all duration-500 bg-white hover:shadow-xl" onclick="revealContent(this)">
+          <div class="absolute -right-4 -top-4 opacity-10 group-hover:opacity-20">
+            <i class="fas fa-infinity" style="font-size: 100px;"></i>
+          </div>
+          <i class="fas fa-infinity mb-4 text-pink-500" style="font-size: 32px;"></i>
+          <h3 class="text-xl font-bold mb-3">Forever Together</h3>
+          <div class="hidden-content transform transition-all duration-500 translate-y-4 opacity-0">
+            <p class="text-gray-600">
+              My promise to you is eternity. You and me, always. ♾️<br>
+              <span class="text-pink-500">"हमेशा तेरे साथ चलूंगा, चाहे रास्ते कठिन हों,  
+              तुझसे बिछड़ने का ख्याल भी सहन नहीं।"</span>
+            </p>
+          </div>
+          <div class="overlay absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-sm transition-opacity group-hover:opacity-0">
+            <p class="text-sm font-medium">Click to reveal ✨</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      function revealContent(card) {
+        const hiddenContent = card.querySelector('.hidden-content');
+        const overlay = card.querySelector('.overlay');
+  
+        if (hiddenContent && overlay) {
+          hiddenContent.style.transform = 'translateY(0)';
+          hiddenContent.style.opacity = '1';
+          overlay.style.opacity = '0';
+          overlay.style.pointerEvents = 'none';
+        }
+      }
+    </script>
+  </section>
+  
+  <section class="py-16 bg-white/50 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+        Our Memories
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="memories-grid">
+        <!-- Memory Blocks -->
+        <div class="group aspect-square overflow-hidden rounded-xl cursor-pointer relative memory-item" data-title="Meri Janu Meri Parmanu 🐦‍🔥" data-src="/assets/1.jpeg">
+          <img alt="A selfie of a couple smiling together, capturing their first selfie moment." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" height="400" src="/assets/1.jpeg" width="400" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="absolute bottom-4 left-4 text-white font-medium">Meri Janu Meri Parmanu 🐦‍🔥</p>
+          </div>
+        </div>
+        <div class="group aspect-square overflow-hidden rounded-xl cursor-pointer relative memory-item" data-title="Glory in Midnight 🌃" data-src="/assets/2.jpeg">
+          <img alt="A couple enjoying a sunny day at the beach, with waves crashing in the background." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" height="400" src="/assets/2.jpeg" width="400" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="absolute bottom-4 left-4 text-white font-medium">Glory in Midnight 🌃</p>
+          </div>
+        </div>
+        <div class="group aspect-square overflow-hidden rounded-xl cursor-pointer relative memory-item" data-title="Birthday Celebration 🎂" data-src="/assets/3.jpeg">
+          <img alt="A festive holiday celebration with a couple smiling in front of a decorated Christmas tree." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" height="400" src="/assets/3.jpeg" width="400" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="absolute bottom-4 left-4 text-white font-medium">Birthday Celebration 🎂</p>
+          </div>
+        </div>
+        <div class="group aspect-square overflow-hidden rounded-xl cursor-pointer relative memory-item" data-title="Beautiflyy 🦋" data-src="assets/4.jpeg">
+          <img alt="A couple cooking together in the kitchen, sharing a joyful moment." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" height="400" src="assets/4.jpeg" width="400" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="absolute bottom-4 left-4 text-white font-medium">Beautiflyy 🦋</p>
+          </div>
+        </div>
+        <div class="group aspect-square overflow-hidden rounded-xl cursor-pointer relative memory-item" data-title="Chand in Chandini 🌕" data-src="assets/5.jpeg">
+          <img alt="A cozy movie night setup with a couple snuggled up on the couch." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" height="400" src="assets/5.jpeg" width="400" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="absolute bottom-4 left-4 text-white font-medium">Chand in Chandini 🌕</p>
+          </div>
+        </div>
+        <div class="group aspect-square overflow-hidden rounded-xl cursor-pointer relative memory-item" data-title=">Sunshine 💫" data-src="assets/6.jpeg">
+          <img alt="A couple on a weekend adventure, exploring a scenic outdoor location." class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" height="400" src="assets/6.jpeg" width="400" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="absolute bottom-4 left-4 text-white font-medium">Sunshine 💫</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal -->
+    <div id="memory-modal" class="fixed inset-0 bg-black/75 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+      <div class="bg-white rounded-lg overflow-hidden max-w-lg w-full relative">
+        <button id="close-modal" class="absolute top-4 right-4 text-gray-700 hover:text-black text-2xl">&times;</button>
+        <img id="modal-img" src="" alt="Memory" class="w-full">
+        <div class="p-4">
+          <h3 id="modal-title" class="text-xl font-bold mb-2"></h3>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      const modal = document.getElementById('memory-modal');
+      const modalImg = document.getElementById('modal-img');
+      const modalTitle = document.getElementById('modal-title');
+      const closeModal = document.getElementById('close-modal');
+      const memoryItems = document.querySelectorAll('.memory-item');
+  
+      // Function to open modal
+      function openModal(src, title) {
+        modalImg.src = src;
+        modalTitle.textContent = title;
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+      }
+  
+      // Function to close modal
+      function closeModalHandler() {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+      }
+  
+      memoryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const src = item.getAttribute('data-src');
+          const title = item.getAttribute('data-title');
+          openModal(src, title);
+        });
+      });
+  
+      closeModal.addEventListener('click', closeModalHandler);
+  
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModalHandler();
+      });
+    </script>
+  </section>
+  
+  <section class="py-16">
+   <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+     QR Codes
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <div class="flex flex-col items-center">
+      <img alt="QR code for our journey" class="w-64 h-64 object-cover" height="256" src="assets/Our Journey.svg" width="256"/>
+      <p class="text-xl text-gray-600 mt-4">
+       Our Journey
+      </p>
+     </div>
+     <div class="flex flex-col items-center">
+      <img alt="QR code for my message to her" class="w-64 h-64 object-cover" height="256" src="assets/My Message.svg" width="256"/>
+      <p class="text-xl text-gray-600 mt-4">
+       My Message to You
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+        Memory Game
+      </h2>
+      <div id="gameBoard" class="grid grid-cols-4 gap-4 max-w-md mx-auto"></div>
+      <button id="restartButton" class="mt-8 block mx-auto px-6 py-2 bg-purple-500 text-white text-lg font-semibold rounded-lg hover:bg-purple-600">
+        Restart Game
+      </button>
+      <div id="confettiContainer" class="hidden fixed inset-0 flex items-center justify-center pointer-events-none">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+      </div>
+    </div>
+    <style>
+      .confetti {
+        width: 10px;
+        height: 10px;
+        background-color: #f59e0b;
+        position: absolute;
+        animation: fall 2s linear infinite;
+      }
+      .confetti:nth-child(2) { background-color: #ef4444; animation-delay: 0.2s; }
+      .confetti:nth-child(3) { background-color: #10b981; animation-delay: 0.4s; }
+      .confetti:nth-child(4) { background-color: #3b82f6; animation-delay: 0.6s; }
+      .confetti:nth-child(5) { background-color: #a855f7; animation-delay: 0.8s; }
+      @keyframes fall {
+        0% { transform: translateY(-100vh) translateX(0); opacity: 1; }
+        100% { transform: translateY(100vh) translateX(50px); opacity: 0; }
+      }
+    </style>
+    <script>
+      const symbols = ['❤️', '🌟', '🎵', '🎁', '🌹', '💫'];
+      let cards = [...symbols, ...symbols]; // Duplicate symbols for pairs
+      let firstCard = null;
+      let secondCard = null;
+      let matches = 0;
+  
+      // Shuffle the cards array
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+  
+      // Initialize the game
+      function initializeGame() {
+        const gameBoard = document.getElementById('gameBoard');
+        const confettiContainer = document.getElementById('confettiContainer');
+        gameBoard.innerHTML = '';
+        confettiContainer.classList.add('hidden'); // Hide confetti
+        shuffle(cards);
+        matches = 0;
+  
+        cards.forEach((symbol, index) => {
+          const card = document.createElement('div');
+          card.className =
+            'aspect-square rounded-xl text-3xl flex items-center justify-center cursor-pointer transition-all duration-500 transform hover:scale-105 bg-pink-100';
+          card.dataset.index = index;
+          card.dataset.symbol = symbol;
+          card.innerHTML = `<span class="hidden">${symbol}</span>`;
+          card.addEventListener('click', handleCardClick);
+          gameBoard.appendChild(card);
+        });
+      }
+  
+      // Handle card click
+      function handleCardClick(event) {
+        const card = event.currentTarget;
+        if (card === firstCard || card.classList.contains('matched')) return;
+  
+        // Show the symbol
+        card.querySelector('span').classList.remove('hidden');
+  
+        if (!firstCard) {
+          // First card clicked
+          firstCard = card;
+        } else if (!secondCard) {
+          // Second card clicked
+          secondCard = card;
+  
+          // Check for a match
+          if (firstCard.dataset.symbol === secondCard.dataset.symbol) {
+            firstCard.classList.add('matched');
+            secondCard.classList.add('matched');
+            matches += 1;
+  
+            // Check for game win
+            if (matches === symbols.length) {
+              setTimeout(() => showCelebration(), 500);
+            }
+  
+            resetSelection();
+          } else {
+            // No match, hide cards after a brief delay
+            setTimeout(() => {
+              firstCard.querySelector('span').classList.add('hidden');
+              secondCard.querySelector('span').classList.add('hidden');
+              resetSelection();
+            }, 1000);
+          }
+        }
+      }
+  
+      // Show celebration (confetti animation)
+      function showCelebration() {
+        const confettiContainer = document.getElementById('confettiContainer');
+        confettiContainer.classList.remove('hidden');
+        setTimeout(() => alert('Congratulations! You completed the game!'), 500);
+      }
+  
+      // Reset selected cards
+      function resetSelection() {
+        firstCard = null;
+        secondCard = null;
+      }
+  
+      // Restart the game
+      document.getElementById('restartButton').addEventListener('click', initializeGame);
+  
+      // Start the game on page load
+      initializeGame();
+    </script>
+  </section>
+  <section class="py-16 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Favorite Songs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Song 1 -->
+        <div class="bg-white text-gray-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-2">"Perfect" - Ed Sheeran</h3>
+          <p class="text-sm mb-4">The song that always reminds me of us slow dancing in the living room. 🩰❤️</p>
+          <div class="flex items-center gap-2">
+            <a
+              href="https://www.youtube.com/watch?v=2Vv-BfVoq4g"
+              target="_blank"
+              class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-full"
+            >
+              ▶️ Play
+            </a>
+          </div>
+        </div>
+        <!-- Song 2 -->
+        <div class="bg-white text-gray-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-2">"Tum Hi Ho" - Arijit Singh</h3>
+          <p class="text-sm mb-4">This song is the soundtrack of our love story. 🎶💕</p>
+          <div class="flex items-center gap-2">
+            <a
+              href="https://www.youtube.com/watch?v=10iV-krF-6g"
+              target="_blank"
+              class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-full"
+            >
+              ▶️ Play
+            </a>
+          </div>
+        </div>
+        <!-- Song 3 -->
+        <div class="bg-white text-gray-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-2">"A Thousand Years" - Christina Perri</h3>
+          <p class="text-sm mb-4">Because loving you feels like eternity. 🌟♾️</p>
+          <div class="flex items-center gap-2">
+            <a
+              href="https://www.youtube.com/watch?v=rtOvBOTyX00"
+              target="_blank"
+              class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-full"
+            >
+              ▶️ Play
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+        Promises for the Future
+      </h2>
+      <div class="space-y-6">
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-heart text-pink-500 text-3xl"></i>
+          <p class="text-lg text-gray-700">I promise to always hold your hand through life's ups and downs. ❤️</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-star text-yellow-500 text-3xl"></i>
+          <p class="text-lg text-gray-700">I promise to celebrate every little milestone with you. 🌟</p>
+        </div>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-ring text-purple-500 text-3xl"></i>
+          <p class="text-lg text-gray-700">I promise to always love you more than yesterday, and less than tomorrow. 💍</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
+        A Letter to You
+      </h2>
+      <div class="bg-gradient-to-r from-pink-50 to-purple-50 p-8 rounded-xl shadow-lg">
+        <p class="text-lg leading-8 text-gray-700">
+          My Dearest Love,<br><br>
+          As I sit down to write this, my heart overflows with emotions that words can barely capture. This past year has been nothing short of magical—a beautiful symphony of love, laughter, and togetherness. From the very first moment I met you, I knew my life would never be the same. You have brought a light into my world that I never even knew I needed.<br><br>
+          
+          I remember our first date as if it happened yesterday—the way your smile lit up the evening, how your laughter echoed in my heart, and the warmth of your touch when we first held hands. That day, my world gained color, and I realized I was no longer alone in this journey of life. You are my safe place, my home, and my greatest adventure.<br><br>
+          
+          With you, even the simplest moments become extraordinary. Whether it’s sharing pastries at the end of every month, singing along to our favorite songs, or getting lost in conversations that stretch into the early hours of the morning, you make everything feel meaningful. You’ve shown me what love truly is—not just in grand gestures but in the quiet, tender moments when we simply exist together.<br><br>
+          
+          I cherish the way you see me—not just as who I am, but as who I strive to be. Your belief in me, your endless patience, and your boundless love have inspired me to become the best version of myself. With every passing day, I fall more in love with you. You are my anchor in the storm and my wings when I dream.<br><br>
+          
+          Thank you for being my partner, my confidant, and my everything. Thank you for the endless joy you bring into my life and for loving me in ways I never thought possible. Here's to us, my love, and the countless memories we have yet to create together. I promise to love you more with each sunrise, hold you closer with each sunset, and walk beside you through every twist and turn life may bring.<br><br>
+          
+          Forever yours, with all my heart,<br>
+          <span class="italic text-pink-600">"तुम मेरी ज़िन्दगी का सबसे हसीन हिस्सा हो, और मैं हमेशा तुम्हारे साथ चलना चाहता हूँ।"</span><br>
+          Yours, always and forever ❤️
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="py-16 bg-gradient-to-br from-pink-100 to-purple-100 text-center">
+   <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6">
+     Here's to Many More
+    </h2>
+    <p class="text-xl text-gray-600">
+     Forever yours ❤️
+    </p>
+   </div>
+  </section>
+  <script src="script.js"></script>
+ </body>
+</html>
 
